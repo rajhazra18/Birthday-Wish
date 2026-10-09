@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#060605">
+  <title>Birthday Wish</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,500;0,600;1,400;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main id="birthdayApp" class="birthday-app" data-page="landing" aria-label="A Royal Cinematic Birthday Journey">
+
+
+  <!-- Inside index.html, directly under <main id="birthdayApp" ...> -->
+
+  <!-- ========================================================
+       GLOBAL MUSIC CONTROLLER (PERSISTENT ACROSS ALL PAGES)
+  ========================================================= -->
+  <main id="birthdayApp" class="birthday-app" data-page="landing" aria-label="A Royal Cinematic Birthday Journey">
+
+  <!-- GLOBAL MUSIC BUTTON -->
+  <button id="globalMusicBtn" class="global-music-btn" type="button" aria-label="Toggle background music">
+    <span class="music-btn-icon" aria-hidden="true">♫</span>
+    <span id="musicBtnLabel" class="music-btn-label">Pause Music</span>
+  </button>
+
+    
+
+
+  <!-- ========================================================
+       PAGE 1 & PAGE 2 VERTICAL TRACK
+  ========================================================= -->
+  <div class="page-track" id="pageTrack">
+
+    <!-- PAGE 1: THE KINGSROAD -->
+    <section id="page1" class="page page--landing" aria-label="Chapter I: The Kingsroad">
+      <video id="landingVideo" class="fullscreen-video" autoplay muted loop playsinline preload="auto"></video>
+      <div class="landing-overlay" aria-hidden="true"></div>
+
+      <div class="landing-content">
+        <p class="royal-kicker">WELCOME in kingsroad</p>
+        <h1 class="royal-title">Your Grace<br/><p>Winter is coming</p></h1>
+        <p class="royal-subtitle">A little suprise for you...</p>
+      </div>
+
+      <div class="landing-action-corner">
+        <button id="openSurprise" class="cinematic-button cinematic-button--royal-gold" type="button" aria-label="Begin your journey">
+          <span>Open your surprise</span>
+          <strong aria-hidden="true">↗</strong>
+        </button>
+      </div>
+    </section>
+
+    <!-- PAGE 2: THE ANCIENT CHEST REALM -->
+    <section id="page2" class="page page--realm" aria-label="Chapter II: The Chest of Memories">
+      <div class="video-stack" aria-hidden="true">
+        <video id="closedVideo" class="scene-video scene-video--closed" muted loop playsinline preload="auto"></video>
+        <video id="openingVideo" class="scene-video scene-video--opening" muted playsinline preload="auto"></video>
+        <video id="openVideo" class="scene-video scene-video--open" muted loop playsinline preload="auto"></video>
+        <video id="fireVideo" class="transition-video" muted playsinline preload="auto"></video>
+      </div>
+
+      <div class="realm-overlay" aria-hidden="true"></div>
+
+      <div class="realm-top">
+        <span class="realm-label">Dragonstone</span>
+        <span class="realm-divider" aria-hidden="true"></span>
+      </div>
+
+      <div class="realm-copy" aria-live="polite">
+        <h2 id="realmTitle">Wishing your birthday special</h2>
+        <p id="realmDescription">Small gifts hope you like.</p>
+      </div>
+
+      <!-- Dedicated Box Open Button -->
+      <button id="chestOpenBtn" class="chest-trigger-button is-hidden" type="button" aria-label="Open the ancient chest">
+        <span class="chest-trigger-ring" aria-hidden="true"></span>
+        <span class="chest-trigger-text">OPEN CHEST</span>
+      </button>
+
+      <!-- 3D Memory Cards Output -->
+      <div id="memoryDeck" class="memory-deck" aria-label="Birthday memory cards">
+        <div class="memory-light" aria-hidden="true"></div>
+        <div id="memoryCards"></div>
+      </div>
+
+      <!-- Navigation to Return to Page 1 -->
+      <button id="page2Prev" class="page-nav page-nav--prev" type="button" aria-label="Return to the Kingsroad">
+        <span aria-hidden="true">←</span>
+        <span>Previous</span>
+      </button>
+
+      <!-- Dracarys Trigger -->
+      <div id="dracarysArea" class="continue-area">
+        <button id="dracarysButton" class="cinematic-button cinematic-button--dracarys" type="button" disabled>
+          <span>DRACARYS</span>
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <!-- ========================================================
+       PAGE 3: THE BIRTHDAY CELEBRATION (MESSY 3D BUNDLE)
+  ========================================================= -->
+  <section id="page3" class="page page--finale" aria-label="Chapter III: Birthday Wishes">
+    <div class="page3-visuals" aria-hidden="true">
+      <video id="page3Video" class="page3-video" muted loop playsinline preload="auto"></video>
+    </div>
+    <div class="page3-overlay" aria-hidden="true"></div>
+
+    <!-- 3D Messy Physical Card Bundle Container -->
+    <div class="bundle-stage" aria-label="Physical royal message card bundle">
+      <div id="cardBundle" class="card-bundle"></div>
+
+      <!-- Left / Right Bundle Controls -->
+      <button id="bundlePrevBtn" class="bundle-arrow bundle-arrow--prev" type="button" aria-label="Previous card in bundle">
+        <span aria-hidden="true">‹</span>
+      </button>
+      <button id="bundleNextBtn" class="bundle-arrow bundle-arrow--next" type="button" aria-label="Next card in bundle">
+        <span aria-hidden="true">›</span>
+      </button>
+
+      <!-- Bundle Progress Counter -->
+      <div id="bundleCounter" class="bundle-counter" aria-live="polite">I / V</div>
+    </div>
+
+    <!-- Return to Page 2 -->
+    <button id="page3Prev" class="page-nav page-nav--prev" type="button" aria-label="Return to previous chapter">
+      <span aria-hidden="true">←</span>
+      <span>Previous</span>
+    </button>
+
+    <!-- Proceed to Page 4 (Bottom-Right) -->
+    <div id="nextPageArea" class="next-page-area">
+      <button id="nextPageButton" class="cinematic-button cinematic-button--royal-gold" type="button" aria-label="Proceed to the final chapter">
+        <span>Next chapter</span>
+        <strong aria-hidden="true">→</strong>
+      </button>
+    </div>
+  </section>
+
+  <!-- ========================================================
+       PAGE 4: VALAR MORGHULIS (THE CLOSING SCENE)
+  ========================================================= -->
+  <section id="page4" class="page page--page4" aria-label="Chapter IV: Valar Morghulis">
+    <div class="page4-visual" aria-hidden="true">
+      <video id="page4Video" class="page4-video" muted loop playsinline preload="auto"></video>
+      <div class="page4-overlay"></div>
+    </div>
+
+    <div id="page4Text" class="page4-text">
+      <span id="page4Kicker" class="page4-kicker"></span>
+      <h1 id="page4Title">VALAR MORGHULIS</h1>
+      <p id="page4Message">The journey ends here… but your treat is still pending.</p>
+    </div>
+
+    <!-- Only Previous Button (Bottom-Left) -->
+    <button id="page4Prev" class="page-nav page-nav--prev page-nav--page4" type="button" aria-label="Return to birthday wishes">
+      <span aria-hidden="true">←</span>
+      <span>Previous</span>
+    </button>
+  </section>
+
+</main>
+
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
+<script src="js/audio.js"></script>
+</body>
+</html>
